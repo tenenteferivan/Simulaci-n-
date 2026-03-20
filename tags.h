@@ -1,21 +1,25 @@
 #pragma once
 #include <cstdint>
 
-static const uint32_t TAG_INFLAMABLE = 1u << 0;
-static const uint32_t TAG_EN_FUEGO   = 1u << 1;
-static const uint32_t TAG_MOJADO     = 1u << 2;
-static const uint32_t TAG_ACIDO      = 1u << 3;
-static const uint32_t TAG_COMIDA     = 1u << 4;
-static const uint32_t TAG_REFUGIO    = 1u << 5;
+enum TerrainTags : uint32_t {
+   TAG_FUEGO       = 1u << 8,
+    TAG_NONE       = 0,
+    TAG_PASTO      = 1u << 0,
+    TAG_AGUA       = 1u << 1,
+    TAG_MUERTE     = 1u << 2,
+    TAG_FERTIL     = 1u << 3,
+    TAG_REFUGIO    = 1u << 4,
+    TAG_PELIGRO    = 1u << 5,
+    TAG_FEROMONA_A = 1u << 6,
+    TAG_FEROMONA_B = 1u << 7,
 
-static const uint32_t TAG_AGUA       = 1u << 6;
-static const uint32_t TAG_BOSQUE     = 1u << 7;
-static const uint32_t TAG_MONTANA    = 1u << 8;
-static const uint32_t TAG_COLINA     = 1u << 9;
-static const uint32_t TAG_CUEVA      = 1u << 10;
-static const uint32_t TAG_DESIERTO   = 1u << 11;
-static const uint32_t TAG_PANTANO    = 1u << 12;
-static const uint32_t TAG_PRADERA    = 1u << 13;
-static const uint32_t TAG_PIEDRA     = 1u << 14;
-static const uint32_t TAG_MINERAL    = 1u << 15;
-static const uint32_t TAG_LAGO       = 1u << 16;
+    TAG_BOSQUE     = 1u << 8,
+    TAG_MONTANA    = 1u << 9,
+    TAG_COLINA     = 1u << 10,
+    TAG_CUEVA      = 1u << 11,
+    TAG_DESIERTO   = 1u << 12,
+    TAG_PANTANO    = 1u << 13,
+    TAG_MINERAL    = 1u << 14,
+    TAG_PIEDRA     = 1u << 15,
+    TAG_LAVA       = 1u << 16
+};
